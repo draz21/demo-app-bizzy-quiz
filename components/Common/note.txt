@@ -1,0 +1,2 @@
+This folder is a collection of shared components
+example , button, icon, text
