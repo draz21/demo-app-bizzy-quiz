@@ -32,10 +32,10 @@ const Page = () => {
     cacheTime: 0,
   })
 
-  const correctAnswer = data?.results?.[questionIndex].correct_answer
-  const allAnswers = data?.results?.[questionIndex].incorrect_answers
-  const totalQuestion = data?.results?.length
-  const isLastQuestion = questionIndex === totalQuestion - 1
+  const correctAnswer: string = data?.results?.[questionIndex].correct_answer
+  const allAnswers: string[] = data?.results?.[questionIndex].incorrect_answers
+  const totalQuestion: number = data?.results?.length
+  const isLastQuestion: boolean = questionIndex === totalQuestion - 1
 
   const goNext = () => {
     //set the user answer
