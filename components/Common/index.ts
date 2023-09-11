@@ -1,6 +1,6 @@
-import CustomButton from "./Button";
-import TextString from "./Text";
-import Loading from "./Loading";
+import CustomButton from "./Button/Button";
+import TextString from "./Text/Text";
+import Loading from "./Loading/Loading";
 
 export {
     CustomButton,

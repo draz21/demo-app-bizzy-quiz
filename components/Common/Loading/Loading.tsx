@@ -4,7 +4,7 @@ interface LoadingProps {}
 
 const Loading: React.FC<LoadingProps> = ({ }) => {
   return (
-    <div className="mt-20 mb-20 h-100 w-full flex items-center justify-center">
+    <div id='loader' className="mt-20 mb-20 h-100 w-full flex items-center justify-center">
       <div
         className="
             inline-block 

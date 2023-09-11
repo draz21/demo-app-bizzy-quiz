@@ -20,11 +20,11 @@ const Success: React.FC<SuccessProps> = ({
     <div className="bg-white flex justify-center items-center w-screen h-200 mt-40 p-5">
         <div className="border shadow-teal-300 shadow-md max-w-2xl p-6 rounded-lg">
             <div className="border-b-2 mb-8 text-center">
-                <h1 className="text-4xl font-mono font-extrabold py-3">{data.status}</h1>
+                <h1 data-testid='success-title' className="text-4xl font-mono font-extrabold py-3">{data.status}</h1>
             </div>
             {
                 data?.corrAns.length > 0 ? 
-                <ul className="list-disc text-lg px-6">
+                <ul id='result-details' className="list-disc text-lg px-6">
                     {
                         data?.corrAns.map((ans: string, idx: number) => (
                             <li key={idx}>
@@ -37,7 +37,7 @@ const Success: React.FC<SuccessProps> = ({
                 <TextString id='passed-label' label='You have chosen all of the correct answers!' />
             }
             <div className='border-t-2 mt-5 pt-5 flex flex-row justify-between'>
-                <h6 className={twMerge("text-sm font-mono font-extrabold", data.result >= 50 ? 'text-green-700' : 'text-red-700')}>
+                <h6 data-testid='success-desc' className={twMerge("text-sm font-mono font-extrabold", data.result >= 50 ? 'text-green-700' : 'text-red-700')}>
                     {data.result >= 50 ? passText : failText}
                 </h6>
                 <CustomButton
