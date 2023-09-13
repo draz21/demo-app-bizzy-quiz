@@ -17,7 +17,15 @@ const jestConfig: JestConfigWithTsJest = {
   modulePathIgnorePatterns: ["<rootDir>/e2e"],
   moduleNameMapper: {
     '@/components/Common': "<rootDir>/components/Common",
-  }
+  },
+  coverageThreshold: {
+    global: {
+      branches: 85,
+      functions: 85,
+      lines: 85,
+      statements: 85,
+    },
+  },
 }
 
 export default jestConfig

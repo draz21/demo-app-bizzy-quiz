@@ -93,7 +93,8 @@ const Page = () => {
       setCorrectAnswers(correctAnswers)
     }
   }
-  const buttonLabel = isLastQuestion ? "Submit" : "Next"
+  const buttonLabel: string = isLastQuestion ? "Submit" : "Next"
+  const buttonId : string = isLastQuestion ? 'submit_button' : 'next_button'
 
   // index = question index
   const handleSelect = (answer: string) => {
@@ -147,10 +148,11 @@ const Page = () => {
   return (
     <div className="mt-20 h-100 w-full items-center justify-center bg-teal-lightest font-sans flex flex-col">
       <div className='my-2 justify-between gap-3 flex flex-row'>
-        <Selector variant='classic' onChange={(v) => setQuery({...query, category : v})} placeHolder='Select Category' options={categoryOptions}/>
-        <Selector onChange={(v) => setQuery({...query, difficulty : v})} placeHolder='Select Difficulty' options={difficulityOptions}/>
+        <Selector id='category_select' variant='classic' onChange={(v) => setQuery({...query, category : v})} placeHolder='Select Category' options={categoryOptions}/>
+        <Selector id='difficulty_select' onChange={(v) => setQuery({...query, difficulty : v})} placeHolder='Select Difficulty' options={difficulityOptions}/>
         <CustomTextField type="number" onChange={(e) => handleChange(e)} placeHolder="Number of Questions"/>
         <CustomButton 
+          id='start_quiz'
           color='crimson'
           size='2' 
           onClick={startQuizz}
@@ -178,12 +180,14 @@ const Page = () => {
               !isLoading && !submitLoading && !isRefetching && (
                 <div className='mt-4 justify-center flex flex-row gap-2'>
                   <CustomButton 
+                    id='previous_button'
                     disabled={questionIndex === 0}
                     color='indigo' 
                     size='1' 
                     onClick={goPrevious} 
                     label="Previous"/>
                   <CustomButton 
+                    id={buttonId}
                     disabled={selectedAnswerIndex === null}
                     color='grass' 
                     size='1' 
