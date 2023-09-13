@@ -147,7 +147,7 @@ const Page = () => {
   return (
     <div className="mt-20 h-100 w-full items-center justify-center bg-teal-lightest font-sans flex flex-col">
       <div className='my-2 justify-between gap-3 flex flex-row'>
-        <Selector onChange={(v) => setQuery({...query, category : v})} placeHolder='Select Category' options={categoryOptions}/>
+        <Selector variant='classic' onChange={(v) => setQuery({...query, category : v})} placeHolder='Select Category' options={categoryOptions}/>
         <Selector onChange={(v) => setQuery({...query, difficulty : v})} placeHolder='Select Difficulty' options={difficulityOptions}/>
         <CustomTextField type="number" onChange={(e) => handleChange(e)} placeHolder="Number of Questions"/>
         <CustomButton 
@@ -193,7 +193,7 @@ const Page = () => {
               )
             }
           </div>
-        ) : <Empty />
+        ) : <Empty src="/image.jpg"/>
       }
     </div>
   )

@@ -26,7 +26,7 @@ const CustomTextField: React.FC<TextFieldProps> = ({
             </TextField.Slot>
         )
       }
-      <TextField.Input type={type} placeholder={placeHolder} onChange={onChange} id='id' {...props}/>
+      <TextField.Input type={type} placeholder={placeHolder} onChange={onChange} id={id} {...props}/>
     </TextField.Root>
   )
 }

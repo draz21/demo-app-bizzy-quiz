@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+
 export default defineConfig({
   testDir: './e2e',
   fullyParallel: true,
@@ -24,18 +25,5 @@ export default defineConfig({
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
-    {
-      name: 'Microsoft Edge',
-      use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    },
-    {
-      name: 'Google Chrome',
-      use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    },
   ],
-  webServer: {
-    command: 'npm run start',
-    url: 'http://127.0.0.1:3000',
-    reuseExistingServer: !process.env.CI,
-  },
 });

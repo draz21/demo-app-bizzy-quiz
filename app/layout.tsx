@@ -7,7 +7,7 @@ import { Theme } from '@radix-ui/themes';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 export const metadata: Metadata = {
-  title: 'Bizzy Quiz',
+  title: 'BizzyQuiz',
   description: ':)',
 };
 

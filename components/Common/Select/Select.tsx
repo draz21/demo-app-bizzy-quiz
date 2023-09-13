@@ -28,7 +28,7 @@ const Selector: React.FC<SelectProps> = ({
 }) => {
     return (
         <Select.Root defaultValue={defaultValue} onValueChange={onChange}>
-            <Select.Trigger placeholder={placeHolder} radius={radius} variant={triggerVariant}/>
+            <Select.Trigger id={id} placeholder={placeHolder} radius={radius} variant={triggerVariant}/>
             <Select.Content variant={contentVariant}>
                 {
                     options.map((option: optionProps, idx: number) => (

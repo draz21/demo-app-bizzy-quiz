@@ -1,5 +1,4 @@
-import { render, fireEvent } from '@testing-library/react'
-import React from 'react'
+import { render } from '@testing-library/react'
 import Loading from './Loading';
 
 describe('Test a Loader Component', () => {

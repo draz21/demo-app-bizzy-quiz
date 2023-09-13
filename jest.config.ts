@@ -1,5 +1,6 @@
 
 import type { JestConfigWithTsJest } from 'ts-jest'
+import BabelConfig from './babel.config'
 
 const jestConfig: JestConfigWithTsJest = {
   preset: 'ts-jest',
@@ -9,10 +10,11 @@ const jestConfig: JestConfigWithTsJest = {
     '^.+\\.(tsx|ts)?$': [
       'ts-jest',
       {
-        babelConfig: true,
+        babelConfig: BabelConfig,
       },
     ],
   },
+  modulePathIgnorePatterns: ["<rootDir>/e2e"],
   moduleNameMapper: {
     '@/components/Common': "<rootDir>/components/Common",
   }
