@@ -18,7 +18,7 @@ const CustomButton: React.FC<ButtonProps> = ({
   ...props
  }) => {
   return (
-    <Button disabled={disabled} type='button' onClick={onClick} {...props}>
+    <Button id={id} disabled={disabled} type='button' onClick={onClick} {...props}>
         {icon && icon}
         {label}
     </Button>
