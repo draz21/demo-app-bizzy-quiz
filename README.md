@@ -26,7 +26,9 @@ To run testing on ths repo, please try
 npm run test
 #unit testing
 
-#e2e testing coming soon
+#e2e testing
+npm run e2e
+#or you can run in vs code for better UI
 ```
 
 ## Learn More
